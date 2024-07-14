@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import './TodoList.css';
+import React, { useState } from 'react'
+import './TodoList.css'
 
 const TodoList = () => {
-  
+  const [todos, setTodos] = useState([])
+  const [headingInput, setHeadingInput] = useState('')
+  const [listInput, setListInput] = useState('')
 
   return (
     <>
@@ -13,16 +15,13 @@ const TodoList = () => {
             type="text"
             className="heading-input"
             placeholder="Enter heading"
-            
           />
           <button className="add-list-button">Add Heading</button>
         </div>
       </div>
-      <div className="todo_main">
-        
-      </div>
+      <div className="todo_main"></div>
     </>
-  );
-};
+  )
+}
 
-export default TodoList;
+export default TodoList
